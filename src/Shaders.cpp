@@ -878,7 +878,7 @@ void createKuwaharaShader(ofShader &shader) {
                                     } else {
                                         discard;
                                     }
-                                    /*
+                                    
                                      m1 /= n;
                                      s1 = abs(s1 / n - m1 * m1);
                                      
@@ -905,7 +905,7 @@ void createKuwaharaShader(ofShader &shader) {
                                      min_sigma2 = sigma2;
                                      fragColor = vec4(m3, a);
                                      }
-                                     */
+                                     
                                 }
                                 );
     
