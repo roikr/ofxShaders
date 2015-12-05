@@ -759,11 +759,11 @@ void createHalftoneShader(ofShader &shader) {
                                     return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
                                 }
                                                             
-                                                            int select2(float a,int i,int j,vec4 b) {
-                                                                return int(mix(i,j,mod(a-b[i]+1,1) < mod(a-b[j]+1,1)));
-                                                            }
-                                                            
-                                                            int select(float a,vec4 b)
+                                int select2(float a,int i,int j,vec4 b) {
+                                    return int(mix(i,j,float(mod(a-b[i]+1,1) < mod(a-b[j]+1,1))));
+                                }
+                                
+                                int select(float a,vec4 b)
                                 {
                                     int i = select2(a,0,1,b);
                                     i = select2(a,i,2,b);
